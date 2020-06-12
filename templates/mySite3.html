@@ -1,25 +1,31 @@
 <!DOCTYPE html>
 <header id="header">
   <img 
-  id="header-img"
+  id="header"
   src="C:\Users\Katya\GitHub\rudakop\templates\google.logo.jfif" alt=""/> 
    <!-- clickable elements inside the nav--> 
-   <nav id="nav-bar" class="navbar navbar-inverse navbar-fixed-top">
-     <h1>Professional skills:</h1>
+   <nav id="nav-bar" class="nav-bar nav-bar-inverse nav-bar-fixed-top">
+    <h1>Professional skills:</h1>
+   <div>
+    <a  class="nav-link1" href="#C1" >JavaScript</a>|
+    <a  class="nav-link2" href="#C2">HTML</a>|
+    <a  class="nav-link3" href="#C3">CSS</a></div>
+     
      <div class="flex-container">
-      <div><a id="nav-bar" href="/JavaScript/">JavaScript</a> </div>
-      <div><a id="nav-bar" class="nav-link2" href="/html/">HTML</a> </div>
-      <div><a id="nav-bar" class="nav-link3" href="/CSS/">CSS</a></div>
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
     </div> 
   </nav>
 </header>
+<body>
 <main id="main">
     <h1 id="title">KATIA KOZLIAKOVA</h1>
          <h3>ABOUT ME</h3>
         <figure id="img-div">
       <img
-        id="image"
-        src="C:\Users\Katya\Documents\GitHub\rudakop\git.test\templates\image001.jpg"
+        id="img-div"
+        src="C:\Users\Katya\Desktop\КАТЯ\РАБОТА КАТИ\резюме\foto for passport\image001.jpg"
         alt=""
       />
       <figcaption id="img-caption">
@@ -44,12 +50,14 @@
           as well as inventory and payment tracking and settlement for customers
         </li></ul>
         <p> <strong>06/2016 - 09/2018	Freelance Web Designer</strong> </p>
-         <ul> <li>Creating and selling aesthetic, yet easy-to-use digital services</li>
+        <ul> <li>Creating and selling aesthetic, yet easy-to-use digital services</li>
           <li>Identifying and tailoring the product to suit the different needs of each customer</li> 
-          <li>Power Point, Photoshop, Illustrator, JavaScript, <a id="nav-bar" class="nav-link2">HTML</a>,
-            <a id="nav-bar" class="nav-link3"> CSS</a>, SQL, knowledge and understanding of JS-frameworks</li>
-          
-        </li></ul>
+          <li>Power Point, Photoshop, Illustrator</li>
+          <li id="C1">JavaScript</li>
+          <li id="C2">HTML</li>
+          <li id="C3">CSS</li> 
+          <li>SQL, knowledge and understanding of JS-frameworks</li>
+        </ul>
         <p>
           <strong>02/2008 - 09/2018	Economist	Administration of St. Petersburg, Kalin Region</strong>
         <p>
@@ -61,75 +69,36 @@
           <li>Organizing and holding official events</li>
           
       </ul>
-      
-      <h3>
+            <h3>
         If you have time, you can watch about me here
         <a
           id="tribute-link"
           href="https://www.linkedin.com/in/radistka/"
           target="_blank"
-          >Linkedin</a
-        >.
+          >Linkedin</a>
       </h3>
       <section>
         <!--Form element-->
         <form id="form">
-          <p>You can leave your contacts here!</p>
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name">
-          <label for="email">Email:</label>
-          <input type="text" id="email" name="email">
-          <input type="number" name="number" value="number">
-          <label for="email" id="email-label" class="labels"> Email: </label>
-  <div class="right">
-    <input type="email" id="email" class="input" required placeholder="Enter your email here">
-  </div>
-  <br> </br>
-  <label for="number" id="number-label" class="labels">  Age: </label>
-<div class="right">
-  <input id="number" class="input" min="1" max="120" type="number" placeholder="Enter your age here">
-</div>
-<br></br> 
-<!-- dropdown -->
-<label for="food" class="labels"> Favorite Food:</label>
-<div class="right">
-  <select id="dropdown" name="food" class="input ">
-    <option disabled value="select"> Select an option </option>
-    <option value="pizza"> Pizza </option>
-    <option value="salad"> Salad </option>
-    <option value="rice"> Rice </option>
-  </select>
-</div>
-<br> </br>
-    <!-- radio buttons -->
-<label class="labels" for="radio" > What is better? </label>
-<ul class="right" style="list-style: none;">
-  <li class="radio"> <input name="radio-buttons" value="1" type="radio"><label> IT</label></input> </li>
-  <li class="radio"><input name="radio-buttons" value="2" type="radio"><label> Finance</label></input></li>
-</ul>
-
-<!-- checkbox -->
-<label for="sports" class="labels"> What sport(s) I play/label>
-<ul id="sports" style="list-style: none" class="right" >
-  <li class="checkbox"><label><input type="checkbox" id="basketball" value="1"> Basketball </label></input></li>
-  <li class="checkbox"><label><input type="checkbox" id="soccer" value="2"> Swimming </label></input></li>
-  <li class="checkbox"><label><input type="checkbox" id="baseball" value="3"> Baseball/Softball </label></input></li>
-  <li class="checkbox"><label><input type="checkbox" id="badminton"value="4"> Badminton </label></input></li>
-  <li class="checkbox"><label><input type="checkbox" id="football" value="5"> Football </label></input></li>
-  <li class="checkbox"><label><input type="checkbox" id="taekwondo" value="6"> Taekwondo with kids </label></input></li>
-  <li class="checkbox"><label><input type="checkbox" id="tv" value="7"> Running</label></input></li>
-  <br> </br>
-<button id="submit" type="submit" formaction="https://www.freecodecamp.com/email-submit"> Submit </button> <!-- comments -->
-<label for="comment" class="labels"> Suggestions? </label>
-<div>
-<textarea name="comment" rows="8" columns="80" class="input right" placeholder="Enter suggestions..."></textarea>  
+            <p>You can leave your contacts here:</p>
+            <label for="name">Name:</label>
+            <input type="text" id="name" class="input" required placeholder="Enter your name here">
+            <label for="email">Email:</label>
+            <input type="email" id="email" class="input" required placeholder="Enter your email here">
+            <div><button id="submit" type="submit" formaction="https://www.freecodecamp.com/email-submit"> Submit </button>
+            </div></p>
+          </form>
+ <!-- comments -->
+         <label for="comment" class="labels"> Suggestions? </label>
+        <form>
+        <textarea name="comment" rows="8" columns="80" class="input right" placeholder="Enter suggestions..."></textarea>  
         </form>
+       
         <!--video-->
         <h1>I speak finnish</h1>
         <video id="video" width="320" height="240" controls>
           <source src="C:\Users\Katya\Desktop\VID_20200223_102842.mp4 type="video/mp4">
           </video>
-        
-      </section>
-    </section>
+         </section>
   </main>
+  </body>
