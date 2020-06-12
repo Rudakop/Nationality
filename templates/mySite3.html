@@ -4,11 +4,13 @@
   id="header-img"
   src="C:\Users\Katya\GitHub\rudakop\templates\google.logo.jfif" alt=""/> 
    <!-- clickable elements inside the nav--> 
-   <nav id="nav-bar">
+   <nav id="nav-bar" class="navbar navbar-inverse navbar-fixed-top">
      <h1>Professional skills:</h1>
-    <a id="nav-bar" class="nav-link1" href="/JavaScript/">JavaScript</a> 
-    <a id="nav-bar" class="nav-link2" href="/html/">HTML</a> 
-    <a id="nav-bar" class="nav-link3" href="/CSS/">CSS</a> 
+     <div class="flex-container">
+      <div><a id="nav-bar" class="nav-link1" href="/JavaScript/">JavaScript</a> </div>
+      <div><a id="nav-bar" class="nav-link2" href="/html/">HTML</a> </div>
+      <div><a id="nav-bar" class="nav-link3" href="/CSS/">CSS</a></div>
+    </div> 
   </nav>
 </header>
 <main id="main">
@@ -72,15 +74,13 @@
         >.
       </h3>
       <section>
-        <form>
+        <!--Form element-->
+        <form id="form">
           <p>You can leave your contacts here!</p>
-    
-    
           <label for="name">Name:</label>
           <input type="text" id="name" name="name">
           <label for="email">Email:</label>
           <input type="text" id="email" name="email">
-              
           <input type="number" name="number" value="number">
           <label for="email" id="email-label" class="labels"> Email: </label>
   <div class="right">
@@ -125,9 +125,13 @@
 <div>
 <textarea name="comment" rows="8" columns="80" class="input right" placeholder="Enter suggestions..."></textarea>  
         </form>
-        
+        <!--video-->
+        <h1>I speak finnish</h1>
+        <video id="video" width="320" height="240" controls>
+          <source src="C:\Users\Katya\Desktop\VID_20200223_102842.mp4 type="video/mp4">
+          </video>
         <br> </br>
-<button id="submit" type="submit"> Submit </button>
+<button id="submit" type="submit" formaction="https://www.freecodecamp.com/email-submit"> Submit </button>
       </section>
     </section>
   </main>
