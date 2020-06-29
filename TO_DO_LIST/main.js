@@ -1,9 +1,9 @@
 let prevInputValue
-let totalTasks = 0
+let listOfTasks = []
 
 function init () {
   addEventsHandlers()
-  updateTotalTasks()
+  loadTasksFromStorage()
 }
 
 function addEventsHandlers () {
@@ -37,16 +37,14 @@ function onChange (event) {
   }
 }
 
-function updateTotalTasks () {
-  totalTasks = document.querySelector('.todo-list-container').children.length
-}
-
 function addNewTask () {
+  const taskId = Date.now()
   const taskInputValue = document.querySelector('.list-input-field')?.value
   const taskPriority = document.querySelector('.list-input-priority')?.value
-  const newTaskElement = createTaskElement (taskInputValue, taskPriority)
+  const newTaskElement = createTaskElement (taskId, taskInputValue, taskPriority)
 
   addNewTaskToToDoList(newTaskElement)
+  saveTask(taskId, taskInputValue, taskPriority)
   resetInputState()
 }
 
@@ -64,10 +62,13 @@ function removeTask (taskId) {
 
   if (taskElement) {
     taskElement.parentNode.removeChild(taskElement)
+
+    listOfTasks = listOfTasks.filter(task => task.id !== taskId)
+    setTasksToStorage()
   }
 }
 
-function createTaskElement (taskInputValue = "", taskPriority = 0) {
+function createTaskElement (taskId, taskInputValue = "", taskPriority = 0) {
   const liElement = document.createElement('li')
   const pElement = document.createElement('p')
   const spanElement = document.createElement('span')
@@ -81,9 +82,6 @@ function createTaskElement (taskInputValue = "", taskPriority = 0) {
   pElement.innerText = taskInputValue
   spanElement.innerText = taskPriority
   buttonElement.innerText = '-'
-  
-  
-  const taskId = totalTasks++
 
   buttonElement.addEventListener('click', function() {
     removeTask(taskId)
@@ -102,6 +100,35 @@ function addNewTaskToToDoList (newTaskElement) {
   const todoListElement = document.querySelector('.todo-list-container')
 
   todoListElement.appendChild(newTaskElement)  
+}
+
+function loadTasksFromStorage () {
+  listOfTasks = getTasksFromStorage()
+
+  listOfTasks.forEach(function (task) {
+    const newTaskElement = createTaskElement (task.id, task.text, task.priority)
+
+    addNewTaskToToDoList(newTaskElement)
+  })
+}
+
+function saveTask(taskId, taskInputValue, taskPriority = 0) {
+  const task = {
+    id: taskId,
+    text: taskInputValue,
+    priority: taskPriority
+  }
+
+  listOfTasks.push(task)
+  setTasksToStorage()
+}
+
+function getTasksFromStorage () {
+  return JSON.parse(localStorage.getItem('tasks') || [])
+}
+
+function setTasksToStorage () {
+  return localStorage.setItem('tasks', JSON.stringify(listOfTasks))
 }
 
 init ()
