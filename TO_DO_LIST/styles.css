@@ -16,8 +16,13 @@ html, body {
 }
 
 .bgr-gradient-1 {
-  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f5f457+0,ffaded+50,3ddbf4+100 */
-  background: linear-gradient(135deg,  rgb(245,244,87) 0%,rgb(255,173,237) 50%,rgb(61,219,244) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  background: linear-gradient(135deg,  rgb(245,244,87) 0%,rgb(255,173,237) 50%,rgb(61,219,244) 100%);
+}
+
+.bgr-image-1 {
+  background-image: url("./bcground21.png");
+  background-size: auto;
+  background-repeat: no-repeat;
 }
 
 .bgr-image-2 {
@@ -30,14 +35,6 @@ html, body {
   z-index: -1;
   left: 32rem;
   top: 13rem;
-}
-
-
-
-.bgr-image-1 {
-  background-image: url("./bcground21.png");
-  background-size: auto;
-  background-repeat: no-repeat;
 }
 
 .list-title {
