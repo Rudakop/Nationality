@@ -44,6 +44,7 @@ function addNewTask () {
   const newTaskElement = createTaskElement (taskId, taskInputValue, taskPriority)
 
   addNewTaskToToDoList(newTaskElement)
+  scrollDown()
   saveTask(taskId, taskInputValue, taskPriority)
   resetInputState()
 }
@@ -100,6 +101,13 @@ function addNewTaskToToDoList (newTaskElement) {
   const todoListElement = document.querySelector('.todo-list-container')
 
   todoListElement.appendChild(newTaskElement)  
+}
+
+function scrollDown () {
+  const taskListElement = document.querySelector('.todo-list-container')
+  const taskListRect = taskListElement.getBoundingClientRect()
+
+  taskListElement.scrollTo(0, taskListRect.bottom)
 }
 
 function loadTasksFromStorage () {

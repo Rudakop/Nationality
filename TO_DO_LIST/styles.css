@@ -30,7 +30,7 @@ html, body {
   background-size: 33rem;
   background-repeat: no-repeat;
   width: 100%;
-  height: 100%;
+  height: 26rem;
   position: absolute;
   z-index: -1;
   left: 32rem;
@@ -110,6 +110,8 @@ html, body {
 
 .todo-list-container {
   padding-left: 0;
+  max-height: 25rem;
+  overflow-x: scroll;
 }
 
 .todo-task {
