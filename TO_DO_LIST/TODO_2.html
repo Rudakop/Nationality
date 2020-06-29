@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" id="masked-element2">
   
@@ -8,13 +8,12 @@
   height: 100%;
   width: 100%;
   
-  mask-image: linear-gradient(rgb(246, 243, 115) 99%,
+  /*mask-image: linear-gradient(rgb(246, 243, 115) 99%,
   rgb(248, 238, 124) 82%,rgb(255, 178, 231) 48%,
-  rgb(0, 217, 255) 25%,rgb(111, 217, 241) 1%   transparent 100%);
+  rgb(0, 217, 255) 25%,rgb(111, 217, 241) 1%   transparent 100%);*/
   background-image: url("bcground21.png"), url("bcground1.jpg");
   background-repeat: no-repeat,no-repeat,no-repeat;
-  /*mask-image: url(bcground2.jpg);
-  mask-mode: url(bcground_mask.jpg);*/
+  
 }
 
  
@@ -286,63 +285,64 @@
       <li><h3>TO LEARN JAVASCRIPT TUTORIAL</h3></li>
       <li class="checked"><h3>TO WORK WITH APP PROJECT - PROGRAMMING TRAINING</h3></li>
    </ul>
-</main>
-</body>
-</html>
-
-
-
-<script>
-  var myNodelist = document.getElementsByTagName("LI");
-var n;
-for (n = 0; n < myNodelist.length; n++) {
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("X");
-  span.className = "close";
-  span.appendChild(txt);
-  myNodelist[n].appendChild(span);
-}
-
-var close = document.getElementsByClassName("close");
-var n;
-for (n = 0; n < close.length; n++) {
-  close[n].onclick = function() {
-    var div = this.parentElement;
-    div.style.display = "none";
+   <script>
+    var myNodelist = document.getElementsByTagName("LI");
+  var n;
+  for (n = 0; n < myNodelist.length; n++) {
+    var span = document.createElement("SPAN");
+    var txt = document.createTextNode("X");
+    span.className = "close";
+    span.appendChild(txt);
+    myNodelist[n].appendChild(span);
   }
-}
-
-var list = document.querySelector('ul');
-list.addEventListener('click', function(makeList) {
-  if (makeList.target.tagName === 'LI') {
-    makeList.target.classList.toggle('checked');
-  }
-}, false);
-
-function newElement() {
-  var li = document.createElement("li");
-  var inputValue = document.getElementById("myInput").value;
-  var t = document.createTextNode(inputValue);
-  li.appendChild(t);
-  if (inputValue === '') {
-    alert("You must write something!");
-  } else {
-    document.getElementById("myList").appendChild(li);
-  }
-  document.getElementById("myInput").value = "";
-
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("X");
-  span.className = "close";
-  span.appendChild(txt);
-  li.appendChild(span);
-
+  
+  var close = document.getElementsByClassName("close");
+  var n;
   for (n = 0; n < close.length; n++) {
     close[n].onclick = function() {
       var div = this.parentElement;
       div.style.display = "none";
     }
   }
-}
+  
+  var list = document.querySelector('ul');
+  list.addEventListener('click', function(makeList) {
+    if (makeList.target.tagName === 'LI') {
+      makeList.target.classList.toggle('checked');
+    }
+  }, false);
+  
+  function newElement() {
+    var li = document.createElement("li");
+    var inputValue = document.getElementById("myInput").value;
+    var t = document.createTextNode(inputValue);
+    li.appendChild(t);
+    if (inputValue === '') {
+      alert("You must write something!");
+    } else {
+      document.getElementById("myList").appendChild(li);
+    }
+    document.getElementById("myInput").value = "";
+  
+    var span = document.createElement("SPAN");
+    var txt = document.createTextNode("X");
+    span.className = "close";
+    span.appendChild(txt);
+    li.appendChild(span);
+  
+    for (n = 0; n < close.length; n++) {
+      close[n].onclick = function() {
+        var div = this.parentElement;
+        div.style.display = "none";
+      }
+    }
+  }
+  
+  </script>
+</main>
+</body>
+</html>
 
-</script>
+
+
+
