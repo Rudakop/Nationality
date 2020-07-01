@@ -1,0 +1,196 @@
+  /* Reset */
+html, body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .just-background-container {
+    height: 100%;
+  }
+  
+  .main-container {
+    display: inline-block;
+    margin: 0 auto;
+    padding-left: 37rem;
+    padding-top: 2rem;
+  }
+  
+  .bgr-gradient-1 {
+    background: linear-gradient(135deg,
+      rgb(245,244,87) 0%,rgb(255,173,237) 50%,rgb(61,219,244) 100%);
+}
+
+.bgr-image-1 {
+    background-image: url("./bcground21.png");
+    background-size: auto;
+    background-repeat: no-repeat;
+  }
+  
+  .bgr-image-2 {
+    background-image: url("./Change Half Circle Strokes.png");
+    background-size: 39rem;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    left: 29rem;
+    top: 13rem;
+  }
+  
+  
+  
+  .bgr-image-1 {
+    background-image: url("./bcground21.png");
+    background-size: auto;
+    background-repeat: no-repeat;
+  }
+  
+  .list-title {
+    font-size: 1.2rem;
+    font-family: "Arial Rounded MT Bold";
+    color: rgb(61, 29, 200);
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+  }
+  
+  .common-border {
+    border-radius: 0.7rem;
+    border: 1px solid rgb(0, 0, 0, 0);
+  }
+  
+  .todo-input {
+    display: flex;
+    padding: 1rem;
+    background-color: rgb(101, 44, 202);
+    border-radius: 1.3rem;
+    border: 1px solid rgb(0, 0, 0, 0);
+  }
+  
+  .list-input-field {
+    font-family: "Verdana";
+    height: 2.2rem;
+    max-width: 15rem;
+    width: 100%;
+  }
+  
+  .list-input-priority {
+    width: 2.5rem;
+    text-align: end;
+    margin-left: 1rem;
+  }
+  
+  .list-btn-add {
+    margin-left: 1rem;
+    width: 2.5rem;
+    font-size: 1.5rem;
+    font-family: "Verdana";
+  }
+  
+  .priority-legend {
+    font-family: "Verdana";
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .priority-legend-text {
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    color: rgb(61, 29, 200);
+  }
+  
+  .priority-gradient-line {
+    width: 100%;
+    height: 1rem;
+    background: linear-gradient(135deg,  rgb(253,213,62) 0%,rgb(255,22,132) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    margin-left: 1rem;
+    border-radius: 0.5rem;
+  }
+  
+  .list-section h1 {
+    font-size: 1.2rem;
+    font-family: "Arial Rounded MT Bold";
+    color: rgb(61, 29, 200); 
+    text-transform: uppercase;
+    text-align: center;
+  }
+  
+  .todo-list-container {
+    padding-left: 0;
+  }
+  
+  .todo-task {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+  }
+  
+  .todo-task p {
+    flex: 1 0 auto;
+    margin: 0;
+    background-color: rgb(255, 255, 255);
+    padding: 0.5rem;
+  }
+  
+  .todo-task .task-priority {
+    width: 2.12rem;
+    height: 2.12rem;
+    margin-left: 0.5rem;
+    text-align: center;
+    line-height: 2rem;
+  }
+  
+  .todo-task .task-remove-btn {
+    margin-left: 0.5rem;
+    width: 2.3rem;
+    height: 2.3rem;
+    font-size: 1.5rem;
+    font-family: "Verdana";
+  }
+  
+  .priority-level-0 {
+    background-color: rgb(255, 255, 255);
+  }
+  
+  .priority-level-1 {
+    background-color: rgb(250, 239, 91);
+  }
+  
+  .priority-level-2 {
+    background-color: rgb(250, 221, 91);
+  }
+  
+  .priority-level-3 {
+    background-color: rgb(250, 221, 91);
+  }
+  
+  .priority-level-4 {
+    background-color: rgb(250, 221, 91);
+  }
+  
+  .priority-level-5 {
+    background-color: rgb(250, 221, 91);
+  }
+  
+  .priority-level-6 {
+    background-color: rgb(250, 221, 91);
+  }
+  
+  .priority-level-7 {
+    background-color: rgb(250, 221, 91);
+  }
+  
+  .priority-level-8 {
+    background-color: rgb(250, 221, 91);
+  }
+  
+  .priority-level-9 {
+    background-color: rgb(250, 221, 91);
+  }
+  
+  .priority-level-10 {
+    background-color: rgb(250, 221, 91);
+  }

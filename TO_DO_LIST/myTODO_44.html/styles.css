@@ -1,0 +1,254 @@
+
+  main {
+    display: flex;
+  }
+  body {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url("bcground21.png"), url("bcground1.jpg");
+  background-repeat: no-repeat,no-repeat;
+   }
+   
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: stretch;
+    margin: 100px;
+    }
+
+.flex-item1 {/*input string*/
+    order: 0;
+    flex: 0 3 auto;
+    align-self: center;
+    
+    border-radius: 50px;
+    font-size: 12px;
+    font-family: "Verdana";
+    color: rgb(61, 29, 200);
+    line-height: 1.0;
+    text-align: left;
+    
+  }
+ 
+ 
+  .header {
+    order: 0;
+    flex: 0 1 auto;
+    align-self: center;
+    
+
+    border-radius: 25px;
+    background-color: rgb(101, 44, 202);
+    width: 505px;
+    height: 86px;
+    }
+
+  .SubmitBtn {
+    order: 0;
+    flex: 0 1 auto;
+    align-self: center;
+    
+    padding: 10px;
+    border-radius: 15px;
+    background-color: rgb(255, 181, 222);
+    width: 25%;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+    }
+    .SubmitBtn:hover {
+  background-color:rgb(246, 243, 115);
+  }
+
+    h1 {
+    line-height: 1.261;
+    font-size: 23.793px;
+    font-family: "Arial Rounded MT Bold";
+    color: rgb(61, 29, 200);
+    
+    }
+
+  
+  .formElement:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+ 
+
+  
+  .myList {/*lists form*/
+  border-radius: 15px;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  left: 606px;
+  top: 297px;
+  width: 559px;
+  height: 46px;
+  z-index:4;
+}
+
+  
+
+/*font name of Table*/
+#TableName {
+  font-size: 23.793px;
+  font-family: "Arial Rounded MT Bold";
+  color: rgb(61, 29, 200);
+  line-height: 1.261;
+  text-align: left;
+  position: absolute;
+  left: 710.547px;
+  top: 230.499px;
+  
+}
+
+  
+  
+
+  h2 {
+  font-size: 12px;
+  font-family: "Verdana";
+  color: rgb(61, 29, 200);
+  font-weight: bold;
+  line-height: 1.2;
+  text-align: left;
+  position: absolute;
+  left: 635.233px;
+  top: 205px;
+  z-index: 6;
+}
+
+#priLine {
+  border-radius: 15px;
+  background-image: -moz-linear-gradient( 0deg, rgb(248,210,83) 0%, rgb(239,48,124) 100%);
+  background-image: -webkit-linear-gradient( 0deg, rgb(248,210,83) 0%, rgb(239,48,124) 100%);
+  background-image: -ms-linear-gradient( 0deg, rgb(248,210,83) 0%, rgb(239,48,124) 100%);
+  position: absolute;
+  right:245px;
+  top: 210px;
+  width: 373px;
+  height: 19px;
+  z-index: 7;
+}
+
+#circles {
+ position: absolute;
+  left:485px;
+  top: 215px;
+  width: 373px;
+  height: 19px;
+  z-index: 8;
+}
+
+  
+  
+  /*my List of tasks*/
+  ul {
+   border-radius: 15px;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  left: 645px;
+  top: 295px;
+  width: 200px;
+  height: 19px;
+  z-index:9;
+  }
+  h3 {
+  font-size: 12px;
+  padding: 5px;
+  font-family: "Verdana";
+  color: rgb(61, 29, 200);
+  line-height: 1.2;
+  text-align: left;
+  position: relative;
+  right: 365px;
+  bottom: 15px;
+  width: 200px;
+  height: 19px;
+  z-index: 5;
+}
+
+    ul li {
+    cursor: pointer;
+    border-radius: 15px;
+    left:645px;
+    top: 425px;
+    width: 373px;
+    height: 19px;
+    padding: 20px 16px 20px 400px;
+    list-style-type: none;
+    background: rgb(255, 178, 231);
+    font-size: 18px;
+    transition: 0.2s;
+    
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+   ul li:nth-child(odd) {
+    background: #f9f9f9;
+  }
+  
+   ul li:hover {
+    background: rgb(163, 231, 247);
+  }
+  
+    ul li.checked {
+    background: rgb(111, 217, 241);
+    color: #fff;
+    text-decoration: line-through;
+  }
+  
+    ul li.checked::before {
+  content: '';
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 10px;
+
+  
+  }
+  
+    .close {
+    padding: 10px;
+    border-radius: 15px;
+    background-color: rgb(255, 181, 222);
+    position: absolute;
+    right: 25;
+    bottom: 25;
+    line-height: 1.2;
+    padding: 10px 10px 10px 10px;
+  }
+  
+  .close:hover {
+    background-color: rgb(111, 217, 241);
+    color: white;
+  }
+  
+  /*Forms window for entered tasks
+    #myInput {
+  border-radius: 15px;
+  background-color: rgb(255, 255, 255);
+  right: 20px;
+  left: 20px;
+  top: 20px;
+  width: 459px;
+  height: 46px;
+  z-index: 11;
+  position: absolute;
+  }
+ */
+ 

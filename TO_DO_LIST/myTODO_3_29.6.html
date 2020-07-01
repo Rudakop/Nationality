@@ -1,0 +1,363 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" id="masked-element2">
+  
+ <style>
+   * {
+  box-sizing: border-box;
+  }
+  main {
+    display: flex;
+  }
+  body {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url("bcground21.png"), url("bcground1.jpg");
+  background-repeat: no-repeat,no-repeat;
+   }
+   /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 1100px) {
+  main {   
+    flex-direction: column;
+  }
+}
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: stretch;
+    margin: 100px;
+    }
+
+.flex-item1 {/*input string*/
+    order: 0;
+    flex: 0 3 auto;
+    align-self: center;
+    
+    border-radius: 50px;
+    font-size: 12px;
+    font-family: "Verdana";
+    color: rgb(61, 29, 200);
+    line-height: 1.0;
+    text-align: left;
+    
+  }
+ 
+ 
+  .header {
+    order: 0;
+    flex: 0 1 auto;
+    align-self: center;
+    
+
+    border-radius: 25px;
+    background-color: rgb(101, 44, 202);
+    width: 505px;
+    height: 86px;
+    }
+
+  .SubmitBtn {
+    order: 0;
+    flex: 0 1 auto;
+    align-self: center;
+    
+    padding: 10px;
+    border-radius: 15px;
+    background-color: rgb(255, 181, 222);
+    width: 25%;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+    }
+    .SubmitBtn:hover {
+  background-color:rgb(246, 243, 115);
+  }
+
+    h1 {
+    line-height: 1.261;
+    font-size: 23.793px;
+    font-family: "Arial Rounded MT Bold";
+    color: rgb(61, 29, 200);
+    
+    }
+
+  
+  .formElement:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+ 
+
+  
+  .myList {/*lists form*/
+  border-radius: 15px;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  left: 606px;
+  top: 297px;
+  width: 559px;
+  height: 46px;
+  z-index:4;
+}
+
+  
+
+/*font name of Table*/
+#TableName {
+  font-size: 23.793px;
+  font-family: "Arial Rounded MT Bold";
+  color: rgb(61, 29, 200);
+  line-height: 1.261;
+  text-align: left;
+  position: absolute;
+  left: 710.547px;
+  top: 230.499px;
+  
+}
+
+  
+  
+
+  h2 {
+  font-size: 12px;
+  font-family: "Verdana";
+  color: rgb(61, 29, 200);
+  font-weight: bold;
+  line-height: 1.2;
+  text-align: left;
+  position: absolute;
+  left: 635.233px;
+  top: 205px;
+  z-index: 6;
+}
+
+#priLine {
+  border-radius: 15px;
+  background-image: -moz-linear-gradient( 0deg, rgb(248,210,83) 0%, rgb(239,48,124) 100%);
+  background-image: -webkit-linear-gradient( 0deg, rgb(248,210,83) 0%, rgb(239,48,124) 100%);
+  background-image: -ms-linear-gradient( 0deg, rgb(248,210,83) 0%, rgb(239,48,124) 100%);
+  position: absolute;
+  right:245px;
+  top: 210px;
+  width: 373px;
+  height: 19px;
+  z-index: 7;
+}
+
+#circles {
+ position: absolute;
+  left:485px;
+  top: 215px;
+  width: 373px;
+  height: 19px;
+  z-index: 8;
+}
+
+  
+  
+  /*my List of tasks*/
+  ul {
+   border-radius: 15px;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  left: 645px;
+  top: 295px;
+  width: 200px;
+  height: 19px;
+  z-index:9;
+  }
+  h3 {
+  font-size: 12px;
+  padding: 5px;
+  font-family: "Verdana";
+  color: rgb(61, 29, 200);
+  line-height: 1.2;
+  text-align: left;
+  position: relative;
+  right: 365px;
+  bottom: 15px;
+  width: 200px;
+  height: 19px;
+  z-index: 5;
+}
+
+    ul li {
+    cursor: pointer;
+    border-radius: 15px;
+    left:645px;
+    top: 425px;
+    width: 373px;
+    height: 19px;
+    padding: 20px 16px 20px 400px;
+    list-style-type: none;
+    background: rgb(255, 178, 231);
+    font-size: 18px;
+    transition: 0.2s;
+    
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+   ul li:nth-child(odd) {
+    background: #f9f9f9;
+  }
+  
+   ul li:hover {
+    background: rgb(163, 231, 247);
+  }
+  
+    ul li.checked {
+    background: rgb(111, 217, 241);
+    color: #fff;
+    text-decoration: line-through;
+  }
+  
+    ul li.checked::before {
+  content: '';
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 10px;
+
+  
+  }
+  
+    .close {
+    padding: 10px;
+    border-radius: 15px;
+    background-color: rgb(255, 181, 222);
+    position: absolute;
+    right: 25;
+    bottom: 25;
+    line-height: 1.2;
+    padding: 10px 10px 10px 10px;
+  }
+  
+  .close:hover {
+    background-color: rgb(111, 217, 241);
+    color: white;
+  }
+  
+  /*Forms window for entered tasks
+    #myInput {
+  border-radius: 15px;
+  background-color: rgb(255, 255, 255);
+  right: 20px;
+  left: 20px;
+  top: 20px;
+  width: 459px;
+  height: 46px;
+  z-index: 11;
+  position: absolute;
+  }
+ */
+ 
+</style>
+</head>
+  <body>
+    <main>
+  <!-- The flexible container (content) -->
+  <h1>HELLO, KATIA! LIFE IS A BIG TO DO LIST</h1>
+  <div class="container">
+       <div id="myForm"  class="header">
+       <input type="text" id="myInput" class="flex-item1" placeholder="NEW TASK">
+        <span onclick="newElement()" class="SubmitBtn">+</span>
+</div>
+        
+  <!--List of taks-->
+<h1 id="tableName">TO-DO-TABLE FOR TODAY:</h1>
+<h2>PRIORITY</h2>
+<picture id="priLine">
+  <source srcset="priority_line.png" media="(max-width: 400px)">
+    <img src="priority_line.png" alt="">
+</picture>
+<picture id="circles">
+  <source srcset="Change Half Circle Strokes.png" media="(max-width: 650px)">
+    <img src="Change Half Circle Strokes.png" alt="Half Circle">
+</picture>
+<div class="formElement" style="height:45px;">
+    <ul id="myList">
+      <li><h3>TO MAKE DINNER</h3></li>
+      <li><h3>WRITE CV</h3></li>
+      <li><h3>RESERVE PLACE IN KINDERGARDEN FOR JULY</h3></li>
+      <li><h3>TO LEARN JAVASCRIPT TUTORIAL</h3></li>
+      <li class="checked"><h3>TO WORK WITH APP PROJECT - PROGRAMMING TRAINING</h3></li>
+   </ul>
+   </div>
+
+
+
+
+   <script>
+    let myNodelist = document.getElementsByTagName("LI");
+  let n;
+  for (n = 0; n < myNodelist.length; n++) {
+    let span = document.createElement("SPAN");
+    let txt = document.createTextNode("X");
+    span.className = "close";
+    span.appendChild(txt);
+    myNodelist[n].appendChild(span);
+  }
+  
+  let close = document.getElementsByClassName("close");
+  let n;
+  for (n = 0; n < close.length; n++) {
+    close[n].onclick = function() {
+      let div = this.parentElement;
+      div.style.display = "none";
+    }
+  }
+  
+  let list = document.querySelector('ul');
+  list.addEventListener('click', function(makeList) {
+    if (makeList.target.tagName === 'LI') {
+      makeList.target.classList.toggle('checked');
+    }
+  }, false);
+  
+  function newElement() {
+    let li = document.createElement("li");
+    let inputValue = document.getElementById("myInput").value;
+    let t = document.createTextNode(inputValue);
+    li.appendChild(t);
+    if (inputValue === '') {
+      alert("You must write something!");
+    } else {
+      document.getElementById("myList").appendChild(li);
+    }
+    document.getElementById("myInput").value = "";
+  
+    let span = document.createElement("SPAN");
+    let txt = document.createTextNode("X");
+    span.className = "close";
+    span.appendChild(txt);
+    li.appendChild(span);
+  
+    for (n = 0; n < close.length; n++) {
+      close[n].onclick = function() {
+        let div = this.parentElement;
+        div.style.display = "none";
+      }
+    }
+  }
+  </script>
+</main>
+</body>
+</html>
+
+
+
+

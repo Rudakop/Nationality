@@ -1,0 +1,53 @@
+
+
+
+<html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" id="masked-element2">
+      
+     <style>
+       * {
+      box-sizing: border-box;
+      }
+      
+.container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: stretch;
+    }
+
+.flex-item1 {
+    order: 0;
+    flex: 0 3 auto;
+    align-self: center;
+    }
+
+.flex-item2 {
+    order: 0;
+    flex: 0 1 auto;
+    align-self: center;
+    }
+
+.flex-item:nth-child(3) {
+    order: 0;
+    flex: 0 1 auto;
+    align-self: center;
+    }
+</style>
+</head>
+  <body>
+    <main>
+  <!-- The flexible container (content) -->
+<div class="container">
+    <h1 class="flex-item1">HELLO, KATIA! LIFE IS A BIG TO DO LIST</h1>
+
+        <input type="text" id="myInput" class="flex-item2" placeholder="NEW TASK">
+        <span onclick="newElement()" class="SubmitBtn">+</span>
+</div>
+
+</body>
+</html>

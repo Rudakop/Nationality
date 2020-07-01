@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <main>
+  <!-- The flexible container (content) -->
+  <h1>HELLO, KATIA! LIFE IS A BIG TO DO LIST</h1>
+  <div class="container">
+       <div id="myForm"  class="header">
+       <input type="text" id="myInput" class="flex-item1" placeholder="NEW TASK">
+        <span onclick="newElement()" class="SubmitBtn">+</span>
+</div>
+        
+  <!--List of taks-->
+<h1 id="tableName">TO-DO-TABLE FOR TODAY:</h1>
+<h2>PRIORITY</h2>
+<picture id="priLine">
+  <source srcset="priority_line.png" media="(max-width: 400px)">
+    <img src="priority_line.png" alt="">
+</picture>
+<picture id="circles">
+  <source srcset="Change Half Circle Strokes.png" media="(max-width: 650px)">
+    <img src="Change Half Circle Strokes.png" alt="Half Circle">
+</picture>
+<div class="formElement" style="height:45px;">
+    <ul id="myList">
+      <li><h3>TO MAKE DINNER</h3></li>
+      <li><h3>WRITE CV</h3></li>
+      <li><h3>RESERVE PLACE IN KINDERGARDEN FOR JULY</h3></li>
+      <li><h3>TO LEARN JAVASCRIPT TUTORIAL</h3></li>
+      <li class="checked"><h3>TO WORK WITH APP PROJECT - PROGRAMMING TRAINING</h3></li>
+   </ul>
+   </div>
+   <script charset="utf-8" src="./.js"></script>
+</main>
+</body>
+</html>
+
+
+
+
