@@ -1,0 +1,49 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>To-Do List</title>
+     <link rel="stylesheet" href="./styles.css">
+</head>
+
+
+<!-- The flexible container (content) -->
+   <body class="bgr-gradient-1">
+    <div class="bgr-image-1 just-background-container">
+      <div class="bgr-image-2"></div>
+      <main class="main-container">
+        <section class="input-section">
+          <h1 class="list-title">HELLO, KATIA! LIFE IS A BIG TO-DO LIST</h1>
+          <div class="todo-input">
+            <input type="text" id="myInput" placeholder="New task" class="list-input-field common-border">
+            <input type="number" min="0" max="10" value="0" class="list-input-priority common-border">
+            <button class="list-btn-add common-border"desabled>+</button>
+          </div>
+          <div class="priority-legend">
+            <h2 class="priority-legend-text">PRIORITY</h2>
+            <div class="priority-gradient-line"></div>
+          </div>
+        </section>
+
+  <!--List of taks-->
+        <section class="list-section">
+           <h1>TO-DO LIST FOR TODAY:</h1>
+            <ul id="myUL" class="todo-list-container">
+                <li><h3>TO MAKE DINNER</h3><h2 class="priority-legend-text"></h2></li>
+                <li><h3>WRITE CV</h3></li>
+                <li><h3>RESERVE PLACE IN KINDERGARDEN FOR JULY</h3></li>
+                <li><h3>TO LEARN JAVASCRIPT TUTORIAL</h3></li>
+                <li class="checked"><h3>TO WORK WITH APP PROJECT - PROGRAMMING TRAINING</h3></li>
+          </ul>
+       </section>
+       </main>
+     </div>
+     <script charset="utf-8" src="./myCode.js"></script>
+      </body>
+    </html>
+
+
+
+
+
+      
