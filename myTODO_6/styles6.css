@@ -227,7 +227,7 @@ ul li.checked::before {
     
   
   /*List of tasks*/
-  .todo-list-container {
+  /*.todo-list-container {
     padding-left: 0;
   }
   
