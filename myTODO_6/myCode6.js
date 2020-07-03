@@ -7,7 +7,7 @@ for (n = 0; n < myNodelist.length; n++) {
   var spanPriority = document.createElement("SPAN_2");
   var txt = document.createTextNode("-");
   //var inputPriority = document.querySelector('.list-input-field')?.value
-    //spanPriority.innerText = inputPriority;
+  //spanPriority.innerText = inputPriority;
   //spanPriority.className = "priority";
   //spanPriority.appendChild(inputPriority);
   //myNodelist[n].appendChild(spanPriority);
