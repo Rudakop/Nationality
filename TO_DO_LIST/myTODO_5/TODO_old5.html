@@ -1,0 +1,47 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>To-Do List</title>
+     <link rel="stylesheet" href="./styles5.css">
+</head>
+  <body>
+    
+<!-- The flexible container (content) - Input form -->
+   <body class="bgr-gradient-1">
+    <div class="bgr-image-1 just-background-container">
+      <div class="bgr-image-2"></div>
+      <main class="main-container">
+        <section class="input-section">
+          <h1 class="list-title">HELLO, KATIA! LIFE IS A BIG TO DO LIST</h1>
+
+          <div id="myForm" class="todo-input">
+              <input type="text" id="myInput" placeholder="NEW TASK" class="list-input-field">
+              <input type="number" min="0" max="10" value="0" class="list-input-priority">
+              <span onclick="newElement()" class="list-btn-add">+</span>
+          </div>
+          <div class="priority-legend">
+            <h2 class="priority-legend-text">PRIORITY</h2>
+            <div class="priority-gradient-line"></div>
+          </div>
+     </section>
+      
+  <!--List of taks-->
+  <section class="list-section">
+    <h1>TO-DO LIST FOR TODAY:</h1>
+        <ul id="myList" class="todo-list-container">
+            <li><h3>to write CV</h3></li>
+            <li><h3>to learn JavaScript tutorial</h3></li>
+            <li class="checked"><h3>to work with app project - programming training</h3></li>
+        </ul>
+  </section>
+
+       </main>
+      </div>
+    <script charset="utf-8" src="./myCode5.js"></script>
+  </body>
+</html>
+
+
+
+
